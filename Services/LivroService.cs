@@ -96,7 +96,7 @@ namespace Projeto22.Services
             if (entidade_livro == null)
                 throw new Livro_Nao_Cadastrado_Exception();
 
-            entidade_livo.preco = preco;
+            entidade_livro.preco = preco;
 
             await _livroRepository.Atualizar(entidade_livro);
         }
