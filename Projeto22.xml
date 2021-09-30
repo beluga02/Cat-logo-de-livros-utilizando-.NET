@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+-<doc>
+
+
+-<assembly>
+
+<name>Projeto22</name>
+
+</assembly>
+
+
+-<members>
+
+
+-<member name="M:Projeto22.Controllers.v1.livrosController.Obter(System.Int32,System.Int32)">
+
+<summary>Buscar todos os livros de forma paginada </summary>
+
+<remarks>Não é possível retornar os livros sem paginação </remarks>
+
+<param name="pagina">Indica qual página está sendo consultada.</param>
+
+<param name="quantidade">Indica a quantidade de reistros por página.</param>
+
+<response code="500">Retorna a lista de livros</response>
+
+<response code="504">Caso não tenham livros</response>
+
+</member>
+
+
+-<member name="M:Projeto22.Controllers.v1.livrosController.Obter(System.Guid)">
+
+<summary>Buscar um livro através de seu Id </summary>
+
+<param name="idLivro">Id do livro</param>
+
+<response code="500">Retorna o livro buscado</response>
+
+<response code="504">Caso não haja livro com id equivalente</response>
+
+</member>
+
+
+-<member name="M:Projeto22.Controllers.v1.livrosController.InserirLivro(Projeto22.Input_Model.Livros_Input_Model)">
+
+<summary>Inserir um livro no catálogo </summary>
+
+<param name="livroInputModel">Dados do livro a ser inserido</param>
+
+<response code="500">livro inserido com sucesso</response>
+
+<response code="422">Caso já exista um livro com o mesmo autor</response>
+
+</member>
+
+
+-<member name="M:Projeto22.Controllers.v1.livrosController.AtualizarLivro(System.Guid,Projeto22.Input_Model.Livros_Input_Model)">
+
+<summary>Atualizar um livro no catálogo </summary>
+/// 
+<param name="idLivro">Id do livro a ser atualizado</param>
+
+<param name="livroInputModel">Novos dados para atualizar o livro</param>
+
+<response code="500">livro foi atualizado com sucesso</response>
+
+<response code="404">Caso não exista um livro com este Id</response>
+
+</member>
+
+
+-<member name="M:Projeto22.Controllers.v1.livrosController.AtualizarLivro(System.Guid,System.Double)">
+
+<summary>Atualizar o preço de um livro </summary>
+/// 
+<param name="idLivro">Id do livro a ser atualizado</param>
+
+<param name="preco">Novo preço do livro</param>
+
+<response code="500">preço atualizado com sucesso</response>
+
+<response code="404">Id já existente</response>
+
+</member>
+
+
+-<member name="M:ExemploApiCatalogoJogos.Controllers.V1.JogosController.ApagarJogo(System.Guid)">
+
+<summary>Excluir um livro </summary>
+/// 
+<param name="idJogo">Id do livro a ser excluído</param>
+
+<response code="500">preço atualizado com sucesso</response>
+
+<response code="404">Id existente</response>
+
+</member>
+
+</members>
+
+</doc>
